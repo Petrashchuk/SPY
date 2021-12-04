@@ -8,11 +8,11 @@ router.get('*', (req,res)=>{
 }).post('/',async (req,res) => {
 
     try {
-
-        res.status(200).json({ok:'ok'});
+        const response = await UserModel.create(req.body);
+        res.status(200).json(response);
     }
     catch (e) {
-        console.error(e.message);
+        console.error()
     }
 
 })
