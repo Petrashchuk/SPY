@@ -1,0 +1,4 @@
+{
+  "port": 8080,
+  "url": "mongodb+srv://petrashchuk_andrii:Vito9550@cluster0.c3xuk.mongodb.net/SPY_DB?retryWrites=true&w=majority"
+}
