@@ -21,10 +21,13 @@ function sendData (data) {
 async function logSubmit(event) {
     event.preventDefault();
 
-    const email = getByID('email').value;
-    const name = getByID('name').value;
+    const emailField = getByID('email');
+    const nameField = getByID('name')
 
-    await sendData({ name, email, address: await getIp() });
+    await sendData({ name:nameField.value, email:emailField.value, address: await getIp() });
+
+    emailField.value = '';
+    nameField.value = ''
 
     const formWrapper = getByID('formWrapper');
     const gratitude = getByID('gratitude');
